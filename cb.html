@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    const dayCard = function (day, cb) {
+        console.log(`Сьогодні ${day}, треба рано прокинутись.`);
+        setTimeout(cb, 3000);
+    }
+
+    const breakfast = function () {
+        console.log('Поснідати');
+    }
+
+    const shower = function () {
+        console.log('Піти в душ');
+    }
+
+    const loundry = function (time) {
+        for (let i = 0; i <= time; i++) {
+            i = i + 1;
+        }
+        console.log('Включаю пральну машину');
+    }
+
+    const work = function (time) {
+        for (let i = 0; i <= time; i++) {
+            i = i - 0.5;
+        }
+        console.log('Поїхати на роботу');
+    }
+
+    const dinner = function (time) {
+        for (let i = 0; i <= time; i++) {
+            i = i - 0.5;
+        }
+        console.log('Пообідати');
+    }
+
+    const home = function (time) {
+        for (let i = 0; i <= time; i++) {
+            i = i - 0.2;
+        }
+        console.log('Прийти з роботи');
+    }
+
+    const clining = function (time) {
+        for (let i = 0; i <= time; i++) {
+            i = i + 1;
+        }
+        console.log('Прибрати вдома');
+    }
+
+    const supper = function (time) {
+        for (let i = 0; i <= time; i++) {
+            i = i - 0.8;
+        }
+        console.log('Вечеря');
+    }
+
+    const slip = function () {
+        console.log('Пора спати');
+    }
+
+    dayCard('Понеділок', slip);
+    shower();
+    loundry(2000);
+    work(1000);
+    dinner(8000);
+    home(2000);
+    clining(1000);
+    supper(3000);
+
+
+</script>
+</body>
+</html>
