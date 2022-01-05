@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    const wakeUp = (cb) => setTimeout(() => {
+        cb('ПРОКИНУТИСЬ')
+    }, 1000)
+
+    const haveBreakfast = (cb) => setTimeout(() => {
+        cb('ПОСНІДАТИ')
+    }, 1200)
+
+    const shower = (cb) => setTimeout(() => {
+        cb('ПІТИ В ДУШ')
+    }, 2400)
+
+    const goToWork = (cb) => setTimeout(() => {
+        cb('ПОЇХАТИ НА РОБОТУ')
+    }, 2200)
+
+    const haveDinner = (cb) => setTimeout(() => {
+        cb('ПООБІДАТИ')
+    }, 1600)
+
+    const goHome = (cb) => setTimeout(() => {
+        cb('ПРИЙТИ З РОБОТИ')
+    }, 1100)
+
+    const flowers = (cb) => setTimeout(() => {
+        cb('ПОЛИТИ КВІТИ')
+    }, 2200)
+
+    const cliningHome = (cb) => setTimeout(() => {
+        cb('ПРИБРАТИ ВДОМА')
+    }, 1800)
+
+    const haveSupper = (cb) => setTimeout(() => {
+        cb('ПОВЕЧЕРЯТИ')
+    }, 2500)
+
+    const sleeping = (cb) => setTimeout(() => {
+        cb('СПАТИ')
+    }, 2000)
+
+    wakeUp((msg) => {
+        console.log(msg);
+        haveBreakfast((msg) => {
+            console.log(msg);
+            shower((msg) => {
+                console.log(msg);
+                goToWork((msg) => {
+                    console.log(msg);
+                    haveDinner((msg) => {
+                        console.log(msg);
+                        goHome((msg) => {
+                            console.log(msg);
+                            flowers((msg) => {
+                                console.log(msg);
+                                cliningHome((msg) => {
+                                    console.log(msg);
+                                    haveSupper((msg) => {
+                                        console.log(msg);
+                                        sleeping((msg) => {
+                                            console.log(msg);
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    })
+
+</script>
+
+
+</body>
+</html>

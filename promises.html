@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    const wakeUp = () => new Promise(resolve => setTimeout(() => {
+        resolve('ПРОКИНУТИСЬ')
+    }, 900))
+
+    const haveBreakfast = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('ПОСНІДАТИ')
+        }, 2500)
+    })
+
+    const shower = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('ПІТИ В ДУШ')
+        }, 1500)
+    })
+
+    const goToWork = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('ПОЇХАТИ НА РОБОТУ')
+        }, 2000)
+    })
+
+    const haveDinner = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('ПООБІДАТИ')
+        }, 1500)
+    })
+
+    const goHome = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('ПРИЙТИ З РОБОТИ')
+        }, 1700)
+    })
+
+    const flovers = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('ПОЛИТИ КВІТИ')
+        }, 2000)
+    })
+
+    const cliningHome = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('ПРИБРАТИ ВДОМА')
+        }, 1800)
+    })
+
+    const supper = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('ПОВЕЧЕРЯТИ')
+        }, 2200)
+    })
+
+    const sleeping = () => new Promise(resolve => {
+        setTimeout(() => {
+            resolve('СПАТИ')
+        }, 2500)
+    })
+
+    wakeUp()
+        .then(msg => {
+            console.log(msg);
+            return haveBreakfast()
+        })
+        .then(msg => {
+            console.log(msg);
+            return shower()
+        })
+        .then(msg => {
+            console.log(msg);
+            return goToWork()
+        })
+        .then(msg => {
+            console.log(msg);
+            return haveDinner()
+        })
+        .then(msg => {
+            console.log(msg);
+            return goHome()
+        })
+        .then(msg => {
+            console.log(msg);
+            return flovers()
+        })
+        .then(msg => {
+            console.log(msg);
+            return cliningHome()
+        })
+        .then(msg => {
+            console.log(msg);
+            return supper()
+        })
+        .then(msg => {
+            console.log(msg);
+            return sleeping()
+        })
+        .then(msg => {
+            console.log(msg);
+        }).then(() => start())
+
+    const start = async () => {
+        console.log('ЗАПУСК РОЗКЛАДУ НА НАСТУПНИЙ ДЕНЬ');
+        try {
+            let msg = await wakeUp();
+            console.log(msg);
+            msg = await haveBreakfast();
+            console.log(msg);
+            msg = await shower();
+            console.log(msg);
+            msg = await goToWork();
+            console.log(msg);
+            msg = await haveDinner();
+            console.log(msg);
+            msg = await goHome();
+            console.log(msg);
+            msg = await flovers();
+            console.log(msg);
+            msg = await cliningHome();
+            console.log(msg);
+            msg = await supper();
+            console.log(msg);
+            msg = await sleeping();
+            console.log(msg);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+</script>
+
+
+</body>
+</html>
